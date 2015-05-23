@@ -1,7 +1,7 @@
 # Skivvy package: `copy`
 [![npm version](https://img.shields.io/npm/v/@skivvy/skivvy-package-copy.svg)](https://www.npmjs.com/package/@skivvy/skivvy-package-copy)
 ![Stability](https://img.shields.io/badge/stability-stable-brightgreen.svg)
-![Build Status](https://travis-ci.org/skivvyjs/skivvy-package-copy.svg?branch=master)](https://travis-ci.org/skivvyjs/skivvy-package-copy)
+[![Build Status](https://travis-ci.org/skivvyjs/skivvy-package-copy.svg?branch=master)](https://travis-ci.org/skivvyjs/skivvy-package-copy)
 
 > Copy files and folders
 
