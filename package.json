@@ -16,7 +16,11 @@
     "test": "eslint index.js lib test && mocha --reporter spec"
   },
   "keywords": [
-    "skivvy-package"
+    "skivvy-package",
+    "copy",
+    "file",
+    "directory",
+    "folder"
   ],
   "author": "Tim Kendrick <timkendrick@gmail.com>",
   "license": "ISC",
@@ -33,5 +37,13 @@
     "rewire": "^2.3.3",
     "sinon": "^1.14.1",
     "sinon-chai": "^2.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skivvyjs/skivvy-package-copy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skivvyjs/skivvy-package-copy/issues"
+  },
+  "homepage": "https://github.com/skivvyjs/skivvy-package-copy#readme"
 }
