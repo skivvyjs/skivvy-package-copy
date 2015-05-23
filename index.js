@@ -1,7 +1,7 @@
 'use strict';
 
 exports.tasks = {
-	'copy': require('./tasks/copy')
+	'copy': require('./lib/tasks/copy')
 };
 
 exports.defaults = {

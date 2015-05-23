@@ -8,7 +8,7 @@ var sinonChai = require('sinon-chai');
 var Promise = require('promise');
 var rewire = require('rewire');
 
-var task = rewire('../../../tasks/copy');
+var task = rewire('../../../../lib/tasks/copy');
 var copy = createMockDel();
 task.__set__('copy', copy);
 
