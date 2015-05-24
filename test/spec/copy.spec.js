@@ -8,7 +8,7 @@ var sinonChai = require('sinon-chai');
 var Promise = require('promise');
 var rewire = require('rewire');
 
-var task = rewire('../../../../lib/tasks/copy');
+var task = rewire('../../lib/tasks/copy');
 var copy = createMockDel();
 task.__set__('copy', copy);
 
@@ -45,7 +45,7 @@ describe('copy', function() {
 		expect(task.description).to.be.a('string');
 	});
 
-	it('should specify defaults', function() {
+	it('should specify default configuration', function() {
 		expect(task.defaults.source).to.equal(null);
 		expect(task.defaults.destination).to.equal(null);
 		expect(task.defaults.options).to.equal(null);
