@@ -24,6 +24,13 @@ This package allows you to copy files and folders from within the [Skivvy](https
 
 Copy files and folders
 
+#### Usage:
+
+```bash
+skivvy run copy
+```
+
+
 #### Configuration settings:
 
 | Name | Type | Required | Default | Description |
