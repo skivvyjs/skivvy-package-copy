@@ -54,9 +54,9 @@ describe('copy', function() {
 	it('should throw an error if no source path is specified', function() {
 		var promises = [
 			task({}),
-			task({ path: undefined }),
-			task({ path: null }),
-			task({ path: false })
+			task({ source: undefined }),
+			task({ source: null }),
+			task({ source: false })
 		];
 		return Promise.all(promises.map(function(promise) {
 			expect(promise).to.be.rejectedWith('No source');
@@ -66,9 +66,9 @@ describe('copy', function() {
 	it('should throw an error if no destination path is specified', function() {
 		var promises = [
 			task({}),
-			task({ path: undefined }),
-			task({ path: null }),
-			task({ path: false })
+			task({ destination: undefined }),
+			task({ destination: null }),
+			task({ destination: false })
 		];
 		return Promise.all(promises.map(function(promise) {
 			expect(promise).to.be.rejectedWith('No destination');
