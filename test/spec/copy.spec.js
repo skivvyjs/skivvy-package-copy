@@ -9,13 +9,13 @@ var Promise = require('promise');
 var rewire = require('rewire');
 
 var task = rewire('../../lib/tasks/copy');
-var copy = createMockDel();
-task.__set__('copy', copy);
+var mockCopy = createMockCopy();
+task.__set__('copy', mockCopy);
 
 chai.use(chaiAsPromised);
 chai.use(sinonChai);
 
-function createMockDel() {
+function createMockCopy() {
 	return sinon.spy(function(src, dest, callback) {
 		return new Promise(function(resolve, reject) {
 			setTimeout(function() {
@@ -36,9 +36,9 @@ function createMockDel() {
 	});
 }
 
-describe('copy', function() {
+describe('task:copy', function() {
 	afterEach(function() {
-		copy.reset();
+		mockCopy.reset();
 	});
 
 	it('should specify a description', function() {
@@ -81,7 +81,7 @@ describe('copy', function() {
 			destination: 'goodbye-world'
 		})
 			.then(function(results) {
-				expect(copy).to.have.been.calledWith(
+				expect(mockCopy).to.have.been.calledWith(
 					'hello-world',
 					'goodbye-world'
 				);
@@ -104,12 +104,12 @@ describe('copy', function() {
 			destination: 'goodbye-world'
 		})
 			.then(function(results) {
-				expect(copy).to.have.been.calledTwice;
-				expect(copy).to.have.been.calledWith(
+				expect(mockCopy).to.have.been.calledTwice;
+				expect(mockCopy).to.have.been.calledWith(
 					'hello-world',
 					'goodbye-world'
 				);
-				expect(copy).to.have.been.calledWith(
+				expect(mockCopy).to.have.been.calledWith(
 					'hello-user',
 					'goodbye-world'
 				);
@@ -138,7 +138,7 @@ describe('copy', function() {
 			}
 		})
 			.then(function(results) {
-				expect(copy).to.have.been.calledWith(
+				expect(mockCopy).to.have.been.calledWith(
 					'hello-world',
 					'goodbye-world',
 					{
